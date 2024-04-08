@@ -1,0 +1,75 @@
+<body>
+    <div class="content">
+      <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand"><mat-icon>school</mat-icon>   College Management System</span>
+
+        <div class="spacer"></div>
+
+        <button color="accent" class="homebutton" routerLink="/admin-home" routerLinkActive="active">Back to home</button>
+      </mat-toolbar>
+    
+   
+<div class="container">
+<h2 id="a">Students List</h2>
+
+<!--search data -->
+<div class="input-group w-25 mt-5">
+  <input class="form-control" type="text" [(ngModel)]="studentsearch">
+  <button class="btn btn-primary" (click)="filterdata()">Serach</button>
+</div>
+
+
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>  
+            <th>Password</th>   
+            <th>Age</th> 
+            <th>Date_of_birth</th>
+            <th>Gender</th>  
+            <th>Mobile</th>
+            <th>Course</th>
+            <th>MotherName</th>
+            <th>FatherName</th>
+            <th>Address</th>
+            <th>Action</th>
+              </tr>    
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students | paginate: { itemsPerPage: count, currentPage: p}">
+            <td>{{student.id}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.password}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.dob}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.mobile}}</td>
+            <td>{{student.course}}</td>
+            <td>{{student.motherName}}</td>
+            <td>{{student.fatherName}}</td>
+            <td>{{student.address}}</td>
+            <td>
+                <button (click)="updateStudent(student.id)"  class="btn btn-info" ><mat-icon> border_color</mat-icon></button>
+                <button (click)="deleteStudent(student.id)" class="btn btn-danger"><mat-icon>delete</mat-icon></button>
+                <button (click)="studentDetails(student.id)" class="btn btn-info"><mat-icon>visibility</mat-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="mt-8 py-5 flex justify-center items-center">
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>
+</div>
+
+
+
+<footer>
+    <p><small>copyright$2024</small> KrishnaV. All rights reserved.</p>
+  </footer>
+</div>
+</body>

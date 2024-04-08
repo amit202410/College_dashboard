@@ -1,0 +1,79 @@
+<body>
+
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand"><mat-icon>school</mat-icon>   College Management System</span>
+
+        <div class="spacer"></div>
+
+        <button color="accent" class="homebutton" routerLink="/students-list" routerLinkActive="active">Back to home</button>
+      </mat-toolbar>
+
+    <div class="content">
+        <h2>{{student.firstName}}. {{student.lastName}} Details</h2>
+        <table>
+            <tr>
+                <td>Id:</td>
+                <td>{{student.id}}</td>
+            </tr>
+
+            <tr>
+                <td>Full Name:</td>
+                <td>{{student.firstName}}&nbsp;&nbsp;{{student.lastName}}</td>
+            </tr>
+
+            <tr>
+                <td>Age:</td>
+                <td>{{student.age}}</td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>{{student.gender}}</td>
+            </tr>
+
+            <tr>
+                <td>Date_of_birth:</td>
+                <td>{{student.dob}}</td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td>{{student.email}}</td>
+            </tr>
+
+            <tr>
+                <td>Phone No:</td>
+                <td>{{student.mobile}}</td>
+            </tr>
+
+            <tr>
+                <td>Course:</td>
+                <td>{{student.course}}</td>
+            </tr>
+
+            <tr>
+                <td>MotherName:</td>
+                <td>{{student.motherName}}</td>
+            </tr>
+
+            <tr>
+                <td>FatherName:</td>
+                <td>{{student.fatherName}}</td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td>{{student.address}}</td>
+            </tr>
+
+        </table>
+    </div>
+
+        <footer>
+            <p><small>copyright$2023</small> OurCollege. All rights reserved.</p>
+          </footer>
+    
+</body>
+
+    
+

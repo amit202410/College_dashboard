@@ -1,0 +1,40 @@
+body {
+    background-image: url("../../assets/img/adminhome.jpg");
+    background-size:cover;
+    background-position:center;
+  
+}
+
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 16px;
+    color: white;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+
+button {
+    background-color:  rgb(236, 12, 98);
+    color: white;
+    font-size: 20px;
+}
+
+footer
+{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height: 40px;
+    background-color:black;
+    text-align: center;
+    color:white;
+}
+
+marquee {
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}

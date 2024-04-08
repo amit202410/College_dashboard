@@ -1,0 +1,71 @@
+<body>
+
+    <mat-toolbar color="primary" class="navbar">
+        <span class="navbar-brand"><mat-icon>school</mat-icon>   College Management System</span>
+
+        <div class="spacer"></div>
+
+        <button color="accent" class="homebutton" routerLink="/faculty-list" routerLinkActive="active">Back to home</button>
+      </mat-toolbar>
+
+    <div class="content">
+        <h2>{{faculty.firstName}}. {{faculty.lastName}} Details</h2>
+        <table>
+            <tr>
+                <td>Id:</td>
+                <td>{{faculty.id}}</td>
+            </tr>
+
+            <tr>
+                <td>Full Name:</td>
+                <td>{{faculty.firstName}}&nbsp;&nbsp;{{faculty.lastName}}</td>
+            </tr>
+
+            <tr>
+                <td>Age:</td>
+                <td>{{faculty.age}}</td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>{{faculty.gender}}</td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td>{{faculty.email}}</td>
+            </tr>
+
+            <tr>
+                <td>Phone No:</td>
+                <td>{{faculty.phone_No}}</td>
+            </tr>
+
+            <tr>
+                <td>Subject:</td>
+                <td>{{faculty.subject}}</td>
+            </tr>
+
+            <tr>
+                <td>Salary:</td>
+                <td>{{faculty.salary}}</td>
+            </tr>
+
+            <tr>
+                <td>Qualification:</td>
+                <td>{{faculty.qualificaton}}</td>
+            </tr>
+
+        
+
+        </table>
+    </div>
+        <footer>
+            <p><small>copyright$2023</small> OurCollege. All rights reserved.</p>
+          </footer>
+</body>
+
+
+    
+
+

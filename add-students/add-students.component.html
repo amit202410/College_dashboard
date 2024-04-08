@@ -1,0 +1,153 @@
+<!--<body>
+    <div class="container">
+    <h1>Register Here.....!</h1>
+-->
+<body>
+    <div class="content">
+        <h1>Register Here.....!</h1>
+        <form (ngSubmit)="onSubmit()">
+            <table class="form-group">
+                <tr>
+                    <td>
+                      <label>First Name:</label>
+                    </td>
+                     <td>
+                        <input type="text" class="form-control" [(ngModel)]="stud.firstName" name="firstname">
+                    </td>
+                </tr>
+    
+                <tr>
+                     <td>
+                         <label>Last Name:</label>
+                     </td>
+                    <td>
+                         <input type="text" class="form-control" [(ngModel)]="stud.lastName" name="lastname">
+                    </td>
+                </tr>
+
+                
+                <tr>
+                    <td>
+                        <label>Age:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" [(ngModel)]="stud.age" name="age">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" class="form-control" [(ngModel)]="stud.email" name="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" class="form-control" [(ngModel)]="stud.password" name="password">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        <label>DOB:</label>
+                    </td>
+                    <td>
+                        <input type="date" class="form-control" [(ngModel)]="stud.dob" name="Date_of_birth">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <select name="Gender"  [(ngModel)]="stud.gender">
+                        <option>Select Gender</option>
+                        <option  name="gender" class="form-control"  >
+                        Male</option>
+                        <option  name="gender" class="form-control"  >
+                        Female</option>
+                        <option  name="gender" class="form-control" >
+                        Others</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Mobile:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" [(ngModel)]="stud.mobile" name="Mobile">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Course:</label>
+                    </td>
+                    <td>
+                        <select name="course" [(ngModel)]="stud.course">
+                         <option>Select Your Course</option>
+                         <option  name="course" class="form-control"   >
+                            B.Tech-Aeronautical Engineering</option>
+                         <option  name="course" class="form-control"  >
+                            B.Tech-Autpmobile Engineering</option>
+                         <option  name="course" class="form-control"   >
+                            B.Tech-Biotechnology</option>
+                        <option  name="course" class="form-control"  >
+                            B.Tech-Civil Engineering</option>   
+                        <option  name="course" class="form-control"   >
+                            B.Tech-Computer Science and Engineering</option> 
+                        <option  name="course" class="form-control"  >
+                            B.Tech-Electrical and Communication Engineering</option>
+                        <option  name="course" class="form-control"  >
+                            B.Tech-Electrical and  Electonics Engineering </option>
+                        <option  name="course" class="form-control"   >
+                            B.Tech-Mechanical Engineering</option>
+                    </select>
+                         <!-- <input type="text" class="form-control" [(ngModel)]="stud.course" name="Course">  -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>MotherName:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" [(ngModel)]="stud.motherName" name="MotherName">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>
+                        <label>FatherName:</label>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" [(ngModel)]="stud.fatherName" name="FatherName">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Address:</label>
+                    </td>
+                    <td>
+                        <textarea class="form-control" [(ngModel)]="stud.address" name="Address">
+                            </textarea>
+                    </td>
+                </tr>
+    
+
+                <tr>
+                    <button class="btn btn-success" type="submit" >Submit</button>
+                </tr>
+    
+            </table>
+        </form>
+    </div>
+</body>

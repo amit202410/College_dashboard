@@ -1,0 +1,69 @@
+<header>
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand"><mat-icon>school</mat-icon> College Management System</span>
+
+    <div class="spacer"></div>
+
+    <button color="accent" class="homebutton" routerLink="/admin-home" routerLinkActive="active">
+      Back to home
+    </button>
+  </mat-toolbar>
+</header>
+
+<div class="container">
+  <h2 id="a">Faculty List</h2>
+
+  <!-- /*search data*/ -->
+  <div class="input-group w-25 mt-5">
+    <label for="facultysearch" class="sr-only">Search faculty</label>
+    <input class="form-control" type="text" id="facultysearch" [(ngModel)]="facultysearch" placeholder="Search faculty">
+    <button class="btn btn-primary" (click)="filterdata()">Search</button>
+  </div>
+
+  <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LaststName</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Subject</th>
+        <th>salary</th>
+        <th>Phone_No</th>
+        <th>Gender</th>
+        <th>Qualification</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of facultys | paginate: { itemsPerPage: count, currentPage: p}">
+        <td>{{f.id}}</td>
+        <td>{{f.firstName}}</td>
+        <td>{{f.lastName}}</td>
+        <td>{{f.age}}</td>
+        <td>{{f.email}}</td>
+        <td>{{f.password}}</td>
+        <td>{{f.subject}}</td>
+        <td>{{f.salary}}</td>
+        <td>{{f.phone_No}}</td>
+        <td>{{f.gender}}</td>
+        <td>{{f.qualificaton}}</td>
+        <td>
+          <button (click)="updateFaculty(f.id)" class="btn btn-info"><mat-icon> border_color</mat-icon></button>
+          <button (click)="deleteFaculty(f.id)" class="btn btn-danger"><mat-icon>delete</mat-icon></button>
+          <button (click)="facultytDetails(f.id)" class="btn btn-info"><mat-icon>visibility</mat-icon></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="mt-8 py-5 flex justify-center items-center">
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  </div>
+</div>
+
+<footer>
+  <p><small>copyright$2024</small> KrishnaV. All rights reserved.</p>
+</footer>

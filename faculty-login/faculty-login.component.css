@@ -1,0 +1,26 @@
+body {
+    background-image: url("../../assets/img/login.jpg");
+    background-size:cover;
+  background-position:center;
+
+}
+
+div
+{
+
+	text-align:center;
+	padding-left:20px;
+	padding-bottom:25px;
+	padding-right:20px;
+}
+
+.content {
+    text-align: center;
+	
+}
+
+input {
+	border-radius: 30px;
+	width: 30%;
+	height: 40px;
+}
